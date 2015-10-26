@@ -39,6 +39,8 @@ var requestHandler = function(request, response) {
   //
   // You will need to change this if you are sending something
   // other than plain text, like JSON or HTML.
+
+  // TODO We may need to chage this to JSON application/json
   headers['Content-Type'] = "text/plain";
 
   // .writeHead() writes to the request line and headers of the response,
@@ -71,3 +73,5 @@ var defaultCorsHeaders = {
   "access-control-max-age": 10 // Seconds.
 };
 
+module.exports.requestHandler = requestHandler; // added by victor
+//module.exports.defaultCorsHeaders = defaultCorsHeaders;
